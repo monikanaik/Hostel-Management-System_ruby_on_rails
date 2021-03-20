@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Allotments Details</h1>
+
+<table border="2px" class="table">
+  <thead>
+    <tr>
+      <th>Check in date</th>
+      <th>Check out date</th>
+      <th>Room</th>
+      <th>Student</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @allotments.each do |allotment| %>
+      <tr>
+        <td><%= allotment.check_in_date %></td>
+        <td><%= allotment.check_out_date %></td>
+        <td><%= allotment.room_id %></td>
+        <td><%= allotment.student_id %></td>
+        <td><%= link_to 'Show', allotment,class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_allotment_path(allotment),class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', allotment, method: :delete,class: "btn btn-info",data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Allotment', new_allotment_path,class: "btn btn-info" %>

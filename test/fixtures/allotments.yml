@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_in_date: 2021-03-18
+  check_out_date: 2021-03-18
+  room: one
+  student: one
+
+two:
+  check_in_date: 2021-03-18
+  check_out_date: 2021-03-18
+  room: two
+  student: two

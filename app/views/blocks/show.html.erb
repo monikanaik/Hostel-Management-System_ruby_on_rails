@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Block number:</strong>
+  <%= @block.block_number %>
+</p>
+
+<p>
+  <strong>Number of rooms:</strong>
+  <%= @block.number_of_rooms %>
+</p>
+
+<p>
+  <strong>Number of allotments:</strong>
+  <%= @block.number_of_allotments %>
+</p>
+
+<%= link_to 'Edit', edit_block_path(@block) %> |
+<%= link_to 'Back', blocks_path %>

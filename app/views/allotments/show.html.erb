@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Check in date:</strong>
+  <%= @allotment.check_in_date %>
+</p>
+
+<p>
+  <strong>Check out date:</strong>
+  <%= @allotment.check_out_date %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @allotment.room_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @allotment.student_id %>
+</p>
+
+<%= link_to 'Edit', edit_allotment_path(@allotment) %> |
+<%= link_to 'Back', allotments_path %>

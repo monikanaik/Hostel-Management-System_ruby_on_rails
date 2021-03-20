@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rooms Details</h1>
+
+<table border="2px" class="table">
+  <thead>
+    <tr>
+      <th>Room no</th>
+      <th>Floor</th>
+      <th>Block</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.room_no %></td>
+        <td><%= room.floor %></td>
+        <td><%= room.block_id %></td>
+        <td><%= link_to 'Show', room,class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_room_path(room),class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', room, method: :delete,class: "btn btn-info",data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Room', new_room_path,class: "btn btn-info" %>

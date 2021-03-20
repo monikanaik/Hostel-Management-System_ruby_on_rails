@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fees Details</h1>
+
+<table border="2px" class="table">
+  <thead>
+    <tr>
+      <th>Deposite fee</th>
+      <th>Total fee</th>
+      <th>Deposit date</th>
+      <th>Student</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fees.each do |fee| %>
+      <tr>
+        <td><%= fee.deposite_fee %></td>
+        <td><%= fee.total_fee %></td>
+        <td><%= fee.deposit_date %></td>
+        <td><%= fee.student_id %></td>
+        <td><%= link_to 'Show', fee,class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_fee_path(fee),class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', fee, method: :delete,class: "btn btn-info",data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fee', new_fee_path,class: "btn btn-info" %>
